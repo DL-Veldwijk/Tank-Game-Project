@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector3 move;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
