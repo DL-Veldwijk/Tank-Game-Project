@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    public Vector3 movement;
+    PlayerControls controls;
 
-    private void Update()
+    Vector3 move;
+       
+    void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.z= Input.GetAxis("Vertical");
-
-
+        
     }
+
+    
 }
+
