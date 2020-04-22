@@ -9,7 +9,7 @@ public class Timespawn : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Spawnobject", spawnTime, spawnDelay);
+        InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
 
     }
 
