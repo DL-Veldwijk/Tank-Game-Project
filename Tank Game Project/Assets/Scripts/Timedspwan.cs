@@ -14,7 +14,7 @@ public class Timedspwan : MonoBehaviour
         Instantiate(item, transform.position, transform.rotation);
     }
 
-    public void SpawnObject()
+    public void Spawnobject()
     {
 
         if (stopSpawning)
