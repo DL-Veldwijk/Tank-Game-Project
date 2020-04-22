@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUps : MonoBehaviour
+public class Timedspwan : MonoBehaviour
 {
     public GameObject item;
     public bool stopSpawning = false;
@@ -16,7 +16,7 @@ public class PowerUps : MonoBehaviour
 
     public void SpawnObject()
     {
-        
+
         if (stopSpawning)
         {
             CancelInvoke("SpawnObject");
