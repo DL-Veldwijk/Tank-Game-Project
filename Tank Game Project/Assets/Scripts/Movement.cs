@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-       move.x = controls.InputControler.LeftCirclePad.performed +=  
+        
     }
 
     void OnEnable()
