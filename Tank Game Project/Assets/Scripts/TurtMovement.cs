@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class TurtMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Update()
     {
-        
+        DoAim();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DoAim()
     {
-        
+        Vector3 vNewInput = new Vector3(Input.GetAxis("RightCirclePadHor"), Input.GetAxis("RightCirclePadVer"), 0.0f);
+
+        if(vNewInput.sqrMagnitude < 0.1f)
+        {
+            return;
+        }
+
+        var rotate = Mathf.Atan2(Input.GetAxis("RightCirclePadHor"), Input.GetAxis("RightCirclePadVer")) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0, rotate, 0);
     }
 }
