@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurtMovement : MonoBehaviour
-{
-    public Transform turtbody;
+{ 
 
     public void Update()
     {
@@ -22,8 +21,7 @@ public class TurtMovement : MonoBehaviour
 
         var rotate = Mathf.Atan2(Input.GetAxis("RightCirclePadHor"), Input.GetAxis("RightCirclePadVer")) * Mathf.Rad2Deg;
 
-        transform.localRotation = Quaternion.Euler(0, rotate, 0);
-        
+        transform.localRotation = Quaternion.Euler(0, rotate, 0);     
 
     }
 }
