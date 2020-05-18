@@ -24,8 +24,7 @@ public class Movement : MonoBehaviour
     {
         bodyMovement.x = Input.GetAxis("LeftCirclePadHor");
         bodyMovement.z = Input.GetAxis("LeftCirclePadVer");
-        transform.Translate(bodyMovement * speed * Time.deltaTime);
-
+        transform.Translate(bodyMovement * speed * Time.deltaTime);      
     }
 }
 
