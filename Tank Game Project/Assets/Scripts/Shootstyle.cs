@@ -21,7 +21,7 @@ public class Shootstyle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_FireButton = "Fire" + m_PlayerNumber;
+        m_FireButton = "RightBumper" + m_PlayerNumber;
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
 
     }
