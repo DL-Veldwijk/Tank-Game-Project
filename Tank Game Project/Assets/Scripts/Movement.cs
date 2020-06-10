@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Rigidbody rb;
 
-    private Vector3 bodyMovement;
-    public float speed;
+    private float hinput = 0;
+    private float vinput = 0;
+    public int movementspeed = 0;
+    public int rotationspeed = 0;
+    
+    public Rigidbody rb;
 
     public void Start()
     {
@@ -26,7 +29,7 @@ public class Movement : MonoBehaviour
         bodyMovement.z = Input.GetAxis("Vertical");
         transform.Translate(bodyMovement * speed * Time.deltaTime);
         
-
+        transform.Rotate()
     }
 }
 
