@@ -22,9 +22,11 @@ public class Movement : MonoBehaviour
 
     public void DoMove()
     {
-        bodyMovement.x = Input.GetAxis("LeftCirclePadHor");
-        bodyMovement.z = Input.GetAxis("LeftCirclePadVer");
-        transform.Translate(bodyMovement * speed * Time.deltaTime);      
+        bodyMovement.x = Input.GetAxis("Horizontal");
+        bodyMovement.z = Input.GetAxis("Vertical");
+        transform.Translate(bodyMovement * speed * Time.deltaTime);
+        
+
     }
 }
 
