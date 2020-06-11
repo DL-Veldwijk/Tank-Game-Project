@@ -6,30 +6,17 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
 
-    private float hinput = 0;
-    private float vinput = 0;
-    public int movementspeed = 0;
-    public int rotationspeed = 0;
-    
-    public Rigidbody rb;
-
-    public void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    public float moveSpeed = 3.0f;
+    public float rotationSpeed = 90.0f;
 
     public void Update()
     {
-        DoMove();
-    }
+        float rotateTank = Input.GetAxis("Horizontal");
+        float moveTank = Input.GetAxis("Vertical");
 
-    public void DoMove()
-    {
-        bodyMovement.x = Input.GetAxis("Horizontal");
-        bodyMovement.z = Input.GetAxis("Vertical");
-        transform.Translate(bodyMovement * speed * Time.deltaTime);
-        
-        transform.Rotate()
+        GetComponent<Rigidbody>().velocity = transform.forward * moveSpeed * moveTank;
+
+        transform.Rotate(Vector3.up * rotationSpeed * rotateTank * Time.deltaTime);
     }
 }
 
