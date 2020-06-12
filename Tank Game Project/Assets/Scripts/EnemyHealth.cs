@@ -22,9 +22,6 @@ public class EnemyHealth : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerAmmo"))
         {
             health--;
-        }
-        
-            
-        
+        }     
     }
 }
