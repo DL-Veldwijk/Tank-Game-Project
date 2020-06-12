@@ -5,26 +5,20 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Rigidbody rb;
 
-    private Vector3 bodyMovement;
-    public float speed;
+    public float moveSpeed;
+    public float rotationSpeed;
 
-    public void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
 
     public void Update()
     {
-        DoMove();
-    }
+        float rotateTank = Input.GetAxis("Horizontal");
+        float moveTank = Input.GetAxis("Vertical");
 
-    public void DoMove()
-    {
-        bodyMovement.x = Input.GetAxis("LeftCirclePadHor");
-        bodyMovement.z = Input.GetAxis("LeftCirclePadVer");
-        transform.Translate(bodyMovement * speed * Time.deltaTime);      
+        GetComponent<Rigidbody>().velocity = transform.forward * moveSpeed * moveTank;
+       
+        transform.Rotate(Vector3.up * rotationSpeed * rotateTank * Time.deltaTime);
+       
     }
 }
 
