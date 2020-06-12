@@ -6,6 +6,7 @@ public class EnemyShoot : MonoBehaviour
 {
     public GameObject enemyAmmo;
     public float delay = 1.0f;
+    public float thrust;
 
     public GameObject enemyParent;
     public EnemyBehavior enemyBehaviorScript;
@@ -36,6 +37,9 @@ public class EnemyShoot : MonoBehaviour
         if (enemyBehaviorScript.attack && delay == 1.0f)
         {
             Instantiate(enemyAmmo, transform.position, transform.rotation);
+            GetComponent<Rigidbody>().AddForce(transform.forward);
         }
+
     }
+
 }

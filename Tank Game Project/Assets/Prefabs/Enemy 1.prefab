@@ -63,6 +63,7 @@ MonoBehaviour:
   enemyAmmo: {fileID: 2065166174989379980, guid: d334f32f40f5b524699402f7d84a1e0c,
     type: 3}
   delay: 2
+  thrust: 300
   enemyParent: {fileID: 0}
   enemyBehaviorScript: {fileID: 0}
 --- !u!1 &6125854414326687175
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 5
+  speed: 10
 --- !u!114 &7875584887559643291
 MonoBehaviour:
   m_ObjectHideFlags: 0
